@@ -6,7 +6,8 @@ try {
     LogName = "System";
     ID = 27;
     Level = 3;
-    StartTime = (Get-Date).AddDays(-1);
+    #StartTime = (Get-Date).AddDays(-1);
+    StartTime = (Get-Date).AddHours(-3);
     } -ErrorAction Stop
 }
 catch [Exception] {
