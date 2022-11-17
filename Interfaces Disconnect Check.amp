@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="e609b1b6-1997-4cc9-ab0d-924c2d3ec2a2" Name="Interfaces Disconnect Check" Description="Q3VzdG9tIFNjcmlwdCB0byBmaWx0ZXIgb3V0IHJlYm9vdCBldGhlcm5ldCBkaXNjb25uZWN0IGFsZXJ0cy4=" Version="2.19.0.1" MinRequiredVersion="2.19.0.1" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{585b7b39-e64b-43ee-89e1-a90b3350ff65}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml /&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" />
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.40.1.1" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>504,1289</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="504,1289" MinRequiredVersion="2.19.0.1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.40.1.1, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="468,522" MinRequiredVersion="2.10.0.19" Moniker="5ecdeca3-89fc-4d2f-851c-c86853be16b4" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="e9fad24a-9fb8-4bab-af58-be76da2a8cc1" m_bTextLinkChange="False" script="IwBDAG8AcAB5AHIAaQBnAGgAdAAgADIAMAAyADIAIAAtACAAVABvAG0AIAB2AGEAbgAgAFAAZQBsAHQADQAKAA0ACgAjAEcAZQB0ACAATABhAHMAdAAgAEkAbgB0AGUAcgBmAGEAYwBlACAAQQBkAGEAcAB0AGUAcgAgAEQAaQBzAGMAbwBuAG4AZQBjAHQAIABFAHYAZQBuAHQAIABmAHIAbwBtACAAbABhAHMAdAAgADIANAAgAGgAbwB1AHIAcwANAAoAdAByAHkAIAB7AA0ACgAgACAAIAAgACQAbABhAHMAdABJAGYARABpAHMAYwBFAHYAZQBuAHQAIAA9ACAARwBlAHQALQBXAGkAbgBFAHYAZQBuAHQAIAAtAE0AYQB4AEUAdgBlAG4AdABzACAAMQAgAC0ARgBpAGwAdABlAHIASABhAHMAaAB0AGEAYgBsAGUAIABAAHsADQAKACAAIAAgACAATABvAGcATgBhAG0AZQAgAD0AIAAiAFMAeQBzAHQAZQBtACIAOwANAAoAIAAgACAAIABJAEQAIAA9ACAAMgA3ADsADQAKACAAIAAgACAATABlAHYAZQBsACAAPQAgADMAOwANAAoAIAAgACAAIAAjAFMAdABhAHIAdABUAGkAbQBlACAAPQAgACgARwBlAHQALQBEAGEAdABlACkALgBBAGQAZABEAGEAeQBzACgALQAxACkAOwANAAoAIAAgACAAIABTAHQAYQByAHQAVABpAG0AZQAgAD0AIAAoAEcAZQB0AC0ARABhAHQAZQApAC4AQQBkAGQASABvAHUAcgBzACgALQAzACkAOwANAAoAIAAgACAAIAB9ACAALQBFAHIAcgBvAHIAQQBjAHQAaQBvAG4AIABTAHQAbwBwAA0ACgB9AA0ACgBjAGEAdABjAGgAIABbAEUAeABjAGUAcAB0AGkAbwBuAF0AIAB7AA0ACgAgACAAIAAgAGkAZgAgACgAJABfAC4ARQB4AGMAZQBwAHQAaQBvAG4AIAAtAG0AYQB0AGMAaAAgACIATgBvACAAZQB2AGUAbgB0AHMAIAB3AGUAcgBlACAAZgBvAHUAbgBkACAAdABoAGEAdAAgAG0AYQB0AGMAaAAgAHQAaABlACAAcwBwAGUAYwBpAGYAaQBlAGQAIABzAGUAbABlAGMAdABpAG8AbgAgAGMAcgBpAHQAZQByAGkAYQAiACkAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAIwBXAHIAaQB0AGUALQBIAG8AcwB0ACAAIgBOAG8AIABlAHYAZQBuAHQAcwAgAGYAbwB1AG4AZAAiADsADQAKACAAIAAgACAAIAAgACAAIAByAGUAdAB1AHIAbgAgACIATgBvACAARQB2AGUAbgB0AHMAIABGAG8AdQBuAGQALgAiADsADQAKACAAIAAgACAAfQANAAoAfQANAAoADQAKACMARwBlAHQAIABUAGkAbQBlAHMAOgANAAoAJABsAGEAcwB0AEkAZgBEAGkAcwBjAEUAdgBlAG4AdABUAGkAbQBlACAAPQAgACgAJABsAGEAcwB0AEkAZgBEAGkAcwBjAEUAdgBlAG4AdAApAC4AVABpAG0AZQBDAHIAZQBhAHQAZQBkADsADQAKACQAbABhAHMAdABJAGYARABpAHMAYwBFAHYAZQBuAHQAVABpAG0AZQBQAGwAdQBzACAAPQAgACQAbABhAHMAdABJAGYARABpAHMAYwBFAHYAZQBuAHQAVABpAG0AZQAuAGEAZABkAE0AaQBuAHUAdABlAHMAKAAxACkAOwANAAoAJABsAGEAcwB0AEkAZgBEAGkAcwBjAEUAdgBlAG4AdABUAGkAbQBlAE0AaQBuACAAPQAgACQAbABhAHMAdABJAGYARABpAHMAYwBFAHYAZQBuAHQAVABpAG0AZQAuAGEAZABkAE0AaQBuAHUAdABlAHMAKAAtADEAKQA7AA0ACgAkAGwAYQBzAHQAQgBvAG8AdABVAHAAdABpAG0AZQAgAD0AIAAoAEcAZQB0AC0AQwBpAG0ASQBuAHMAdABhAG4AYwBlACAALQBDAGwAYQBzAHMATgBhAG0AZQAgAHcAaQBuADMAMgBfAG8AcABlAHIAYQB0AGkAbgBnAHMAeQBzAHQAZQBtACkALgBMAGEAcwB0AEIAbwBvAHQAVQBwAFQAaQBtAGUAOwANAAoADQAKACMASQBuAGYAbwAgAFAAcgBpAG4AdABzADoADQAKAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAEwAYQBzAHQAIABFAHQAaABlAHIAbgBlAHQAIABEAGkAcwBjAG8AbgBuAGUAYwB0ACAARQB2AGUAbgB0ACAAVABpAG0AZQA6ACAAJABsAGEAcwB0AEkAZgBEAGkAcwBjAEUAdgBlAG4AdABUAGkAbQBlACIAOwANAAoAVwByAGkAdABlAC0ASABvAHMAdAAgACIATABhAHMAdAAgAEIAbwBvAHQAIABVAHAAdABpAG0AZQA6ACAAJABsAGEAcwB0AEIAbwBvAHQAVQBwAHQAaQBtAGUAIgA7AA0ACgANAAoAIwBUAGUAcwB0ACAAUAByAGkAbgB0AHMAOgANAAoAIwBXAHIAaQB0AGUALQBIAG8AcwB0ACAAIgBMAGEAcwB0ACAARQB0AGgAZQByAG4AZQB0ACAARABpAHMAYwBvAG4AbgBlAGMAdAAgAEUAdgBlAG4AdAAgAFQAaQBtAGUAIABQAGwAdQBzACAAMQAgAE0AaQBuAHUAdABlADoAIAAkAGwAYQBzAHQARQB0AGgARABpAHMAYwBvAG4AbgBlAGMAdABFAHYAZQBuAHQAUABsAHUAcwAiAA0ACgAjAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAEwAYQBzAHQAIABFAHQAaABlAHIAbgBlAHQAIABEAGkAcwBjAG8AbgBuAGUAYwB0ACAARQB2AGUAbgB0ACAAVABpAG0AZQAgAE0AaQBuACAAMQAgAE0AaQBuAHUAdABlADoAIAAkAGwAYQBzAHQARQB0AGgARABpAHMAYwBvAG4AbgBlAGMAdABFAHYAZQBuAHQATQBpAG4AIgANAAoAJABpAHMAUgBlAGIAbwBvAHQAIAA9ACAAIgBUAHIAdQBlACIAIAAjADAAIABpAGYAIABhACAAcgBlAGIAbwBvAHQAIABvAHIAIABzAHQAYQByAHQAdQBwACwAIAAxACAAaQBmACAAbgBvAHQAIABhACAAcgBlAGIAbwBvAHQAIABvAHIAIABzAHQAYQByAHQAdQBwAA0ACgBpAGYAIAAoACgAJABsAGEAcwB0AEIAbwBvAHQAVQBwAHQAaQBtAGUAIAAtAGcAdAAgACQAbABhAHMAdABJAGYARABpAHMAYwBFAHYAZQBuAHQAVABpAG0AZQBNAGkAbgApACAALQBhAG4AZAAgACgAJABsAGEAcwB0AEIAbwBvAHQAVQBwAHQAaQBtAGUAIAAtAGwAdAAgACQAbABhAHMAdABJAGYARABpAHMAYwBFAHYAZQBuAHQAVABpAG0AZQBQAGwAdQBzACkAKQAgAHsADQAKACAAIAAgACAAIwBsAGEAcwB0ACAAZQB0AGgAZQByAG4AZQB0ACAAZABpAHMAYwBvAG4AbgBlAGMAdAAgAGUAdgBlAG4AdAAgAHcAYQBzACAAYQAgAHIAZQBiAG8AbwB0ACAAKABvAHIAIABzAHQAYQByAHQAdQBwACkADQAKACAAIAAgACAAVwByAGkAdABlAC0ASABvAHMAdAAgACIAUgBlAGIAbwBvAHQAIABvAHIAIABTAHQAYQByAHQAdQBwAC4AIgA7AA0ACgB9AA0ACgBlAGwAcwBlAGkAZgAgACgAKAAkAGwAYQBzAHQASQBmAEQAaQBzAGMARQB2AGUAbgB0AFQAaQBtAGUAUABsAHUAcwAuAGEAZABkAFMAZQBjAG8AbgBkAHMAKAAxACkAKQAgAC0AZwB0ACAAJABsAGEAcwB0AEIAbwBvAHQAVQBwAHQAaQBtAGUAKQAgAHsADQAKACAAIAAgACAAIwBmAGEAaQBsAGUAZAANAAoAIAAgACAAIABXAHIAaQB0AGUALQBIAG8AcwB0ACAAIgBOAG8AdAAgAGEAIABSAGUAYgBvAG8AdAAuACIAOwANAAoAIAAgACAAIABXAHIAaQB0AGUALQBIAG8AcwB0ACAAIgBgAG4ARQB2AGUAbgB0ACAATQBlAHMAcwBhAGcAZQA6ACAAIgAgAC0ATgBvAE4AZQB3AGwAaQBuAGUAOwANAAoAIAAgACAAIAAoACQAbABhAHMAdABFAHQAaABEAGkAcwBjAG8AbgBuAGUAYwB0AEUAdgBlAG4AdAApAC4ATQBlAHMAcwBhAGcAZQA7AA0ACgAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAGAAbgBQAHIAbwB2AGkAZABlAHIATgBhAG0AZQA6ACAAIgAgAC0ATgBvAE4AZQB3AGwAaQBuAGUAOwANAAoAIAAgACAAIAAoACQAbABhAHMAdABFAHQAaABEAGkAcwBjAG8AbgBuAGUAYwB0AEUAdgBlAG4AdAApAC4AUAByAG8AdgBpAGQAZQByAE4AYQBtAGUAOwANAAoAIAAgACAAIAAkAGkAcwBSAGUAYgBvAG8AdAAgAD0AIAAiAEYAYQBsAHMAZQAiADsAIAAjAGMAaABlAGMAawAgAGYAYQBpAGwAZQBkACAAaQBzACAAdAByAHUAZQANAAoAfQANAAoA">
+          <p:RunPowerShellScript.InArgs>
+            <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="isReboot" ArgType="string" DisplayName="isReboot" Name="isReboot">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_isReboot]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+        <p:IfObject CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" VerboseOutput_Item="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.40.1.1, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="equals" Condition_DisplayArg="equals" DisplayName="If" sap:VirtualizedContainerService.HintSize="468,504" MinRequiredVersion="2.19.0.1" Moniker="18322c76-055e-4004-aea0-c01f95f16272" Result="[IfObject_Result]" ResultString="[IfObject_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="False" Value_Type="x:String" Variable="[RunPowerShellScript_isReboot]" Variable_DisplayArg="Run PowerShell Script.isReboot" Variable_Type="x:String" VerboseOutput="False" VerboseOutput_DisplayArg="" m_bTextLinkChange="False">
+          <p:IfObject.IfOption>
+            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="222,231" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:FailPolicy AssemblyName="PolicyExecutionEngine, Version=2.40.1.1, Culture=neutral, PublicKeyToken=null" DisplayName="Fail Policy" sap:VirtualizedContainerService.HintSize="184,81" MinRequiredVersion="2.10.0.19" Moniker="a50d9a46-2344-431d-a811-75f0152624da" Result="[FailPolicy_Result]" ResultString="[FailPolicy_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="FailPolicy" m_bTextLinkChange="False" />
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="FailPolicy_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="FailPolicy_Result" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfObject.IfOption>
+          <p:IfObject.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral Value="False" />
+            </InArgument>
+          </p:IfObject.Value>
+        </p:IfObject>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="IfObject_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="IfObject_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_isReboot" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>
