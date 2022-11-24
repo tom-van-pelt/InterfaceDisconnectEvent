@@ -1,12 +1,14 @@
 #Copyright 2022 - Tom van Pelt
 
+$timeFrame = $inputHours 
+
+#Get Last Interface Adapter Disconnect Event from last x hours
 try {
-    #Get Last Interface Adapter Disconnect Event from last 24 hours
-    $lastIfDiscEvent = Get-WinEvent -MaxEvents 1 -FilterHashtable @{
+    $lastIfDiscEvent = Get-WinEvent -MaxEvents 1 -FilterHashtable @{ #get 1 disconnect event
     LogName = "System";
     ID = 27;
     Level = 3; #warning
-    StartTime = (Get-Date).AddDays(-1); #last 24 hours
+    StartTime = (Get-Date).AddHours(-$timeFrame); #last x hours
     } -ErrorAction Stop
 }
 catch [Exception] {
@@ -25,16 +27,16 @@ $lastBootUptime = (Get-CimInstance -ClassName win32_operatingsystem).LastBootUpT
 Write-Host "Last Ethernet Disconnect Event Time: $lastIfDiscEventTime";
 Write-Host "Last Boot Uptime: $lastBootUptime";
 
-$isReboot = "True" #0 if a reboot or startup, 1 if not a reboot or startup
+$isReboot = "True" #True if a reboot or startup, False if not a reboot or startup
 if (($lastBootUptime -gt $lastIfDiscEventTimeMin) -and ($lastBootUptime -lt $lastIfDiscEventTimePlus)) {
     Write-Host "Disconnect event was a reboot or Startup.";
 }
 elseif (($lastIfDiscEventTimePlus.addSeconds(1)) -gt $lastBootUptime) {
     Write-Host "Interface is Disconnected.";
-    $isReboot = "False"; #check failed is true
+    $isReboot = "False";
 }
 
 Write-Host "`nEvent Message: " -NoNewline;
-($lastEthDisconnectEvent).Message;
+($lastIfDiscEvent).Message;
 Write-Host "`nProviderName: " -NoNewline;
-($lastEthDisconnectEvent).ProviderName;
+($lastIfDiscEvent).ProviderName;
