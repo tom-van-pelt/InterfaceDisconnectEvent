@@ -37,7 +37,7 @@ if (($lastBootUptime -gt $lastIfDiscEventTimeMin) -and ($lastBootUptime -lt $las
     #last ethernet disconnect event was a reboot (or startup)
     Write-Host "Disconnect event was a reboot or Startup.";
 }
-elseif (($lastIfDiscEventTimePlus.addSeconds(1)) -gt $lastBootUptime) {
+elseif ((($lastIfDiscEventTimePlus.addSeconds(1)) -gt $lastBootUptime) -or (($lastIfDiscEventTimeMin.addSeconds(-1)) -lt $lastBootUptime)) {
     #failed
     Write-Host "Interface is Disconnected.";
     $isReboot = "False";

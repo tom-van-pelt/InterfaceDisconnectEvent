@@ -31,7 +31,7 @@ $isReboot = "True" #True if a reboot or startup, False if not a reboot or startu
 if (($lastBootUptime -gt $lastIfDiscEventTimeMin) -and ($lastBootUptime -lt $lastIfDiscEventTimePlus)) {
     Write-Host "Disconnect event was a reboot or Startup.";
 }
-elseif (($lastIfDiscEventTimePlus.addSeconds(1)) -gt $lastBootUptime) {
+elseif (($lastIfDiscEventTimePlus.addSeconds(1)) -gt $lastBootUptime -or (($lastIfDiscEventTimeMin.addSeconds(-1)) -lt $lastBootUptime)) {
     Write-Host "Interface is Disconnected.";
     $isReboot = "False";
 }
