@@ -15,6 +15,7 @@ catch [Exception] {
     if ($_.Exception -match "No events were found that match the specified selection criteria") {
         return "No Events Found."; #stop script if no events are found
     }
+    return;
 }
 
 #Get Times:
