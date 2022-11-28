@@ -1,5 +1,7 @@
 #Copyright 2022 - Tom van Pelt
 
+#Checks if an Interface adapter is disconnected in the last x hours. Reboots and Startups are filtered out.
+
 #$timeFrame = $inputHours 
 $timeFrame = 24
 
